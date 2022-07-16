@@ -1,6 +1,6 @@
 # GitHub-User-Search
 
-## The Url of the Project is as follows:
+#### The Url of the Project is as follows:
 https://hafizkh.github.io/Github-User-Search
 
 - This Project contains the React Router dom to check the Github User
