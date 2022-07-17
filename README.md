@@ -7,3 +7,9 @@ https://hafizkh.github.io/Github-User-Search
 - Used the React-BootStrap for styling
 - Applications contain several pages and Navbar component
 
+#### How to use App?
+
+- Login First, app redirects to the search page
+- Type username to fetch the information 
+- Logout after that
+
