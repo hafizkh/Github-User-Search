@@ -18,32 +18,16 @@ import Search from './components/Search';
 const App = () => {
   const [user, setUser] = useState('')
   const [username, setUsername] = useState('')
-  const [search, setSearch] = useState('')
 
-
-  const startSearch = async () => {
+  const startSearch = () => {
     const url = `https://api.github.com/users/${username}`
     fetch(url)
-      .then(response => {
-        if (response.ok) {
-          return response.json()
-        }
-        else {
-          alert("Something went wrong")
-        }
-      })
+      .then(response => response.json())
       .then(data => setUser(data))
-  }
-  const handleChange = ((e) => {
-    setUsername(e.target.value)
-
-  })
-
-  const handleInput = ((e) => {
-    setSearch(" ")
-
-  })
-
+      .catch((e) => alert(e));
+      setUsername('')
+    }
+  
   return (
     <div className='Container'>
       <Router>
@@ -53,8 +37,8 @@ const App = () => {
           <Route exact path='/' element={<Home />} />
           <Route exact path='/home' element={<Home />} />
           <Route exact path='/about' element={<About />} />
-          <Route exact path='/search' element={<Search username={username} setUsername={setUsername} 
-          startSearch={startSearch} handleChange={handleChange} handleInput={handleInput} search={search} user={user} />} />
+          <Route exact path='/search' element={<Search username={username} setUsername={setUsername}
+            startSearch={startSearch} user={user} />} />
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='/signup' element={<Signup />} />
           <Route path='/*' element={<NotFound />} />

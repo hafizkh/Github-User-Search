@@ -4,7 +4,12 @@ import User from './User'
 
 
 
-const Search = ({ startSearch, handleChange, user }) => {
+const Search = ({ startSearch,username, user,setUsername}) => {
+
+    const handleChange = ((e) => {
+        setUsername(e.target.value)
+    
+      })
 
     return (
         <div  >
@@ -15,6 +20,7 @@ const Search = ({ startSearch, handleChange, user }) => {
                     placeholder="Search Github User"
                     className="me-2"
                     aria-label="Search"
+                    value={username}
                     onChange={handleChange}
                    
                 />
