@@ -4,30 +4,30 @@ import User from './User'
 
 
 
-const Search = ({ startSearch,username, user,setUsername}) => {
+const Search = ({ startSearch, username, user, setUsername }) => {
 
     const handleChange = ((e) => {
         setUsername(e.target.value)
-    
-      })
+
+    })
 
     return (
-        <div  >
-            <Form className="d-flex container my-3">
+        <div style={{justifyContent: 'center', display: 'grid'}} className='container'>
+            <Form className="d-flex my-3">
                 <FormControl
-                    style={{width: '20rem'}}
+                    style={{ width: '16rem' }}
                     type="text"
                     placeholder="Search Github User"
                     className="me-2"
                     aria-label="Search"
                     value={username}
                     onChange={handleChange}
-                   
+
                 />
                 <Button variant="outline-success " className='mx-3 btn btn-outline-success' onClick={() => { startSearch() }}>Search</Button>
 
             </Form>
-               {user && <User user={user} /> }
+            {user && <User user={user} />}
         </div>
     )
 }
