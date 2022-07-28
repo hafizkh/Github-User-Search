@@ -12,10 +12,10 @@ const Search = ({ startSearch, username, user, setUsername }) => {
     })
 
     return (
-        <div style={{justifyContent: 'center', display: 'grid'}} className='container'>
-            <Form className="d-flex my-3">
+        <div style={{width: '25rem'}} className='container'>
+            <Form className="d-flex mt-3">
                 <FormControl
-                    style={{ width: '16rem' }}
+                    // style={{ width: '16rem' }}
                     type="text"
                     placeholder="Search Github User"
                     className="me-2"
@@ -24,7 +24,7 @@ const Search = ({ startSearch, username, user, setUsername }) => {
                     onChange={handleChange}
 
                 />
-                <Button variant="outline-success " className='mx-3 btn btn-outline-success' onClick={() => { startSearch() }}>Search</Button>
+                <Button variant="outline-success " className= 'btn btn-outline-success' onClick={() => { startSearch() }}>Search</Button>
 
             </Form>
             {user && <User user={user} />}
