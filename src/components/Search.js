@@ -15,7 +15,6 @@ const Search = ({ startSearch, username, user, setUsername }) => {
         <div style={{width: '25rem'}} className='container'>
             <Form className="d-flex mt-3">
                 <FormControl
-                    // style={{ width: '16rem' }}
                     type="text"
                     placeholder="Search Github User"
                     className="me-2"

@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Navbar, Nav, Container, Toast, Row, Col, Button } from 'react-bootstrap'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Link, useNavigate } from "react-router-dom";
 
-
 const NavBar = () => {
-  const [isLoggedIn, setisLoggedIn] = useState(null);
+    const [isLoggedIn, setisLoggedIn] = useState(null);
 
     const navigate = useNavigate()
 
     const logIn = () => {
         setisLoggedIn(true);
-        alert("Loggedin Successfully")
+        toast.success("LoggedIn Successfully",{autoClose: 3000})
         navigate("/search");
-        
-        }
+    }
     const logOut = () => {
-         setisLoggedIn(false);
-        alert("Log out Successfully")
-         navigate('/home')
-         };
+        setisLoggedIn(false);
+        toast.success("Log out Successfully",{autoClose: 3000})
+        navigate('/home')
+    };
     return (
+        <>
         <div>
             <Navbar bg="dark" expand="lg" variant="dark">
                 <Container>
@@ -37,7 +38,7 @@ const NavBar = () => {
                             <Nav.Link as={Link} to={"/contact"}>Contact</Nav.Link>
 
                         </Nav>
-                        
+
                         {!isLoggedIn ? <form className="d-flex">
                             <button className="btn btn-primary" onClick={logIn}> Login </button>
                             <Link className="btn btn-primary mx-1" to="/signup" role="button">Signup</Link>
@@ -47,6 +48,8 @@ const NavBar = () => {
                 </Container>
             </Navbar>
         </div>
+        <ToastContainer/>
+        </>
 
     )
 }
