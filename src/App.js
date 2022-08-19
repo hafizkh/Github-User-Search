@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
-import About from './components/About';
-import Home from './components/Home'
+import Search from './components/Search';
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
+import Signup from './pages/Signup'
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import NotFound from './components/NotFound';
-import Contact from './components/Contact';
-import Signup from './components/Signup';
-import Search from './components/Search';
 
 
 const App = () => {
@@ -35,7 +35,7 @@ const App = () => {
 
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/home' element={<Home />} />
+          <Route exact path='/home' element={<Home/>} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/search' element={<Search username={username} setUsername={setUsername}
             startSearch={startSearch} user={user} />} />
