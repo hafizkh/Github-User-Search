@@ -1,7 +1,7 @@
 # GitHub-User-Search
 
 #### The Url of the Project is as follows:
-https://hafizkh.github.io/Github-User-Search
+[GitHub User Search](https://hafizkh.github.io/Github-User-Search)
 
 - This Project can be used to fetch the infromation of Github User
 - Used the React-BootStrap for styling
@@ -13,3 +13,8 @@ https://hafizkh.github.io/Github-User-Search
 - Type username to fetch the information 
 - Logout after that
 
+### Techstack Used:
+<p>
+<a href="#"><img alt="React" src="https://img.shields.io/badge/React%20-61DAFB.svg?logo=react&logoColor=white"></a>
+ <a href="#"><img alt="BootStrap" src="https://img.shields.io/badge/BootStrap-7952B3.svg?logo=BootStrap&logoColor=white"></a>
+</p>
