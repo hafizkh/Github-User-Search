@@ -6,6 +6,7 @@
 - This Project can be used to fetch the infromation of Github User
 - Used the React-BootStrap for styling
 - Applications contain several pages and Navbar component
+- this is the change for 1st pull request
 
 #### How to use App?
 
